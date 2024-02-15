@@ -3,12 +3,15 @@
 }
 
 
-body, html{
+body{
     height: 500vh;
     margin: 0;
+    overflow-x: hidden;
     font-family: fantasy;
     background: white;
 }
+
+
 
 
 
@@ -113,7 +116,7 @@ body, html{
 
 #contactButton:hover{
     transition: ease-in 1s;
-    text-shadow: 0 0 3px beige, 0 0 3px rgb(255, 157, 0);
+    text-shadow: 0 0 0.5px beige, 0 0 3px rgb(255, 157, 0);
 }
 
 
@@ -134,9 +137,9 @@ body, html{
     
     text-align: center;
     
-    margin-left: -17px;
-    height: 100vh;
-    width: 100vw;
+
+    
+    width: 100vw;    
 
 
 
@@ -184,17 +187,6 @@ h2{
 
 
 
-#profilePic{
-    margin-top: 55px;
-    width: 5rem; 
-    border-radius: 10rem;
-}
-
-#profilePicBackground{
-    background-color:transparent;
-    height: 100%;
-}
-
 #welcomeButtonsDiv{
     background-color: transparent;
 }
@@ -238,6 +230,137 @@ h2{
 
 
 
+#skillsDiv{
+    width: 95vw;
+    padding-top: 50vh;
+    padding-left: 10vw;
+    background-color: transparent;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+
+#skills{
+    font-weight: 100;
+    font-size: 2rem;
+    background-color: transparent;
+    margin: 0px;
+    padding: 0px;
+}
+
+#technologies{
+    background-color: transparent;
+    font-weight: 700;
+    font-size: 4rem;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#languagesSection{
+    position: relative;
+    margin: 50px auto;
+    width: 66%;
+    height: 50vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    background-color: rgb(255, 255, 255);
+    
+}
+
+.languages{
+    z-index: 0;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(rgb(255, 255, 255), rgb(227, 227, 227));
+    border-radius: 10rem;
+    box-shadow: inset -3px -5px 5px rgb(247, 189, 81),
+                       inset 5px 5px 5px rgb(249, 249, 249);
+    animation: bounce 2s linear infinite;
+}
+
+
+
+.ballShadows{
+    position: relative;
+    margin: 0 auto;
+    background-color: rgba(8, 8, 8, 0.153);
+    width: 50px;
+    height: 8px;
+    margin-top: 25%;
+    border-radius: 50%;
+    animation: shadow 2s linear infinite;
+    animation-delay: -1s;
+}
+
+@keyframes shadow {
+    50%{
+        transform: scaleX(0.5);
+    }
+}
+
+@keyframes bounce{
+    50%{
+        margin-top: -10px;
+    }
+
+    100%{
+        margin-top: 0px;
+    }
+}
+
+
+.languages i{
+    margin-top: 15%;
+    margin-left: 22%;
+    font-size: 65px;
+    color: blueviolet;
+}
+
+#jsIcon{
+    color: yellow;
+}
+
+#htmlIcon{
+    margin-left: 25%;
+    margin-top: 20%;
+    color: orangered;
+}
+
+#cssIcon{
+    color:rgb(0, 0, 255);
+    margin-top: 20%;
+    margin-left: 25%;
+}
+
+#sqlIcon{
+    color: rgb(45, 151, 141);
+}
+
+
+
+
 
 
 
@@ -265,7 +388,7 @@ h2{
     background-color: aqua;
     background: transparent;
     margin-left: 10%;
-    margin-top: min(40px, 10vh);
+
     width: 80%;
     height: 500px;
     display: grid;
@@ -281,23 +404,26 @@ h2{
     margin-left: 2.5%;
     margin-right: 2.5%;
     background-color: rgb(227, 227, 227);
-    color: white;
+    color: rgb(0, 0, 0);
 
-    box-shadow: -5px 5px 2px rgb(0, 144, 240),
-                5px -5px 2px rgb(0, 144, 240),
-                -5px -5px 2px rgb(0, 144, 240),
-                5px 5px 2px rgb(0, 144, 240);
+    box-shadow: -5px 5px 2px orange,
+                5px -5px 2px orange,
+                -5px -5px 2px orange,
+                5px 5px 2px orange;
 
+
+    transform: perspective(2000px) rotate3d(0,1,0,0deg);
 
     
 }
 
 .cardTitle{
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(250, 154, 36);
+    background-color: rgb(255, 255, 255);
     height: 30%;
     text-align: center;
-    justify-content: center;    
+    justify-content: center;  
+    border-bottom: 1px solid black;
 }
 
 .cardImg{
@@ -321,7 +447,7 @@ h2{
 .videoSection{
     margin-top: max(25%, 250px);
     margin-left: 10vw;
-    background-color: rgb(4, 26, 46);
+    background-color: rgb(255, 255, 255);
     width: 80%;
     height: 80vh;
     display: grid;
@@ -329,10 +455,10 @@ h2{
     grid-template-rows: 1fr 1fr 1fr;
     gap: 5px;
     
-    box-shadow: -5px 5px 2px rgb(0, 144, 240),
-                5px -5px 2px rgb(0, 144, 240),
-                -5px -5px 2px rgb(0, 144, 240),
-                5px 5px 2px rgb(0, 144, 240);
+    box-shadow: -5px 5px 2px orange,
+                5px -5px 2px orange,
+                -5px -5px 2px orange,
+                5px 5px 2px orange;
 }
 
 video{
@@ -363,9 +489,11 @@ video{
     grid-column: 2;
     margin-top: 10%;
     height: 80%;
-    background-color: rgb(1, 1, 5);
+    background-color: rgb(227, 227, 227);
     border-radius: 2rem 0rem 0rem 2rem;
-    
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
 }
 
 
@@ -489,8 +617,18 @@ video{
         grid-template-rows: 30% 70%;
         justify-content: space-evenly;
     }
+
+    #skills{
+        font-size: 1rem;
+    }
+
+    #technologies{
+        font-size: 2rem;
+    }
+
     
     #experienceSection{
+        margin-top: 500px;
         height: 500px;
         grid-template-columns: 100%;
         grid-template-rows: repeat(3, 400px);
@@ -503,6 +641,8 @@ video{
     .cardTitle{
         width: 30%;
         height: 100%;
+        border-bottom: none;
+        border-right: 1px solid black;
     }
 
     .cardImg{

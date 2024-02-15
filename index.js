@@ -29,6 +29,18 @@ buttonSection.addEventListener('mouseout', () =>{
 
 
 
+aboutButton.addEventListener('click', () =>{
+
+    var welcomeCard = document.getElementById("skills");
+    welcomeCard.scrollIntoView({ behavior:"smooth", block:"start", inline:"nearest"}); 
+});
+
+
+window.onscroll = function(){
+    
+}
+
+
 
 function movementUp(){
     var d = document.getElementById("lightSwitch");
@@ -71,6 +83,9 @@ function movementDown(){
        
     }
 }
+
+
+
 
 
 
