@@ -5,9 +5,12 @@ const gitButton = document.querySelector('#githubButton');
 const contactButton = document.querySelector('#contactButton');
 const plusButton = document.querySelector('#plusButton')
 const lightSwitch = document.querySelector('#lightSwitch');
-const buttonSection = document.querySelector('#plusButtonDiv')
+const buttonSection = document.querySelector('#plusButtonDiv');
+const javaIcon = document.querySelector('#javaIcon');
+
 
 var plusClicked = false;
+
 
 plusButton.addEventListener('click', () =>{
         if(!plusClicked){
@@ -36,9 +39,50 @@ aboutButton.addEventListener('click', () =>{
 });
 
 
-window.onscroll = function(){
+
+
+
+var degree = 0;
+var speed = 0;
+
+javaIcon.addEventListener('mouseover', ()=> {
+
+
+    var d = document.getElementById("javaSpinner");
+    let spinTimer = setInterval(spin, 20);
+
+    function spin(){
+
+        if(degree >= 10800){
+            clearInterval(spinTimer);
+        }
+
+        else{
+            d.style.transform = 'perspective(2000px) rotate3d(0,1,0,' + speed +'deg)';
+            degree+=1;
+            speed+=1;
+        }
+    }
+
+
     
-}
+
+});
+
+
+
+lightSwitch.addEventListener('click', () =>{
+    document.body.style.backgroundColor = 'rgb(36, 35, 35)';
+});
+
+
+
+
+
+
+
+
+
 
 
 
@@ -54,10 +98,10 @@ function movementUp(){
             clearInterval(buttonsTimer);
         }
         else{
-            opacity += 6;
-            height -= 1;
             d.style.top = height + 'vh';
             d.style.opacity = opacity + '%';
+            opacity += 6;
+            height -= 1;
         }
        
     }
@@ -82,6 +126,11 @@ function movementDown(){
         }
        
     }
+}
+
+
+function darkModeActivate(){
+
 }
 
 
