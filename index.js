@@ -34,8 +34,15 @@ buttonSection.addEventListener('mouseout', () =>{
 
 aboutButton.addEventListener('click', () =>{
 
-    var welcomeCard = document.getElementById("skills");
+    var welcomeCard = document.getElementById("experienceSection");
     welcomeCard.scrollIntoView({ behavior:"smooth", block:"start", inline:"nearest"}); 
+});
+
+
+projectsButton.addEventListener('click', () =>{
+
+    var videoSection = document.getElementById("videoSection");
+    videoSection.scrollIntoView({ behavior:"smooth", block:"start", inline:"nearest"}); 
 });
 
 
